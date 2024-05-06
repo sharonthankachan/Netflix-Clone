@@ -1,0 +1,10 @@
+*{
+font-family: "Raleway", sans-serif;
+}
+
+#root .navbar{
+    z-index: 1000;
+}
+#root .banner{
+    z-index: 999;
+}
