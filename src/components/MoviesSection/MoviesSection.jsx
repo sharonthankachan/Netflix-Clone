@@ -2,7 +2,6 @@ import React from 'react'
 import './MoviesSection.css'
 import { useState, useEffect } from 'react'
 import axios from '../API/Axios'
-import { API_KEY } from "../API/URL";
 import { imgUrl } from "../API/URL";
 
 
@@ -11,7 +10,7 @@ function MoviesSection(props) {
   const [movieList,setMovieList]= useState([])
 
   useEffect(()=>{
-    axios.get(`${props.imgGenre}?api_key=${API_KEY}&language=en-US&page=1`)
+    axios.get(`${props.imgGenre}?api_key=${import.meta.env.VITE_API_KEY}&language=en-US&page=1`)
       .then(response=>{
         console.log("movie list:",movieList)
         setMovieList(response.data.results)

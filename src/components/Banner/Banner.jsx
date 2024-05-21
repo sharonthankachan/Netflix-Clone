@@ -1,11 +1,9 @@
 import React, { useEffect,useState } from "react";
 import "./Banner.css";
-import banner from "../../assets/netflix_banner_img.jpg";
 import { FaPlay, FaPlus, FaSearch } from "react-icons/fa";
 import symbol from "../../assets/Netflix_Symbol_CMYK.png";
 import topten from "../../assets/TopTen.png";
 import axios from '../API/Axios'
-import { API_KEY } from "../API/URL";
 import { imgUrl } from "../API/URL";
 
 
@@ -14,7 +12,7 @@ function Banner() {
   const [movieList,setMovieList]= useState([])
 
   useEffect(()=>{
-      axios.get(`trending/movie/day?api_key=${API_KEY}&language=en-US`)
+      axios.get(`trending/movie/day?api_key=${import.meta.env.VITE_API_KEY}&language=en-US`)
       .then(response=>{
         setMovieList(response.data.results[Math.floor(Math.random()*20)])
       })

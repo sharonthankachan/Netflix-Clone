@@ -1,4 +1,2 @@
 export const baseURL='https://api.themoviedb.org/3/'
-export const API_KEY='655d65fc9a812319641680884da15174'
 export const imgUrl='https://media.themoviedb.org/t/p/original'
-export const youTube="https://www.youtube.com/embed/ucr9puXoizY?si=RDKA_Bf4KPGtx8TA"
