@@ -13,10 +13,9 @@ function MoviesSection(props) {
   useEffect(()=>{
     axios.get(`${props.imgGenre}?api_key=${API_KEY}&language=en-US&page=1`)
       .then(response=>{
-        console.log(movieList)
+        console.log("movie list:",movieList)
         setMovieList(response.data.results)
       })
-
 
   },[])
 

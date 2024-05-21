@@ -1,13 +1,14 @@
-.movie_section{
+.movie_section {
     color: #fff;
-}
-
-
-.contents h3{
+    margin-top: 3rem;
+  }
+  
+  .contents h3 {
     margin-left: 3.5rem;
-}
-
-.movie_row{
+  }
+  
+  .movie_row,
+  .movie_row2 {
     margin-top: 1rem;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
@@ -17,52 +18,113 @@
     overflow: hidden;
     overflow-x: scroll;
     padding: 10px;
-}
-
-.movie_row::-webkit-scrollbar{
+  }
+  
+  .movie_row2 {
+    margin-top: 0.5rem;
+    padding: 20px;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .movie_row::-webkit-scrollbar,
+  .movie_row2::-webkit-scrollbar {
     display: none;
-}
-
-.movie_img{
+  }
+  
+  .movie_img {
     width: 145px;
     border-radius: 5px;
     margin: 0.5rem;
     transition: 0.3s;
-}
-
-.movie_img2{
+  }
+  
+  .movie_img2 {
     width: 90px;
     border-radius: 3px;
     transition: 0.3s;
-
-}
-
-.movie_card{
+  }
+  
+  .movie_card {
     transition: all 0.3s ease;
-}
-
-.movie_card:hover{
+  }
+  
+  .movie_card:hover {
     transform: scale(1.1);
     transition: 0.3s;
-}
-.movie_card:active{
+  }
+  
+  /* .movie_card:active {
     outline: 2px solid white;
-}
-.movie_row2{
-    margin-top: 0.5rem;
-    margin-left: 3.5rem;
-    margin-right: 3.5rem;
-    display: flex;
-    align-items: top;
-    border-radius: 5px;
-    overflow: hidden;
-    overflow-x: scroll;
-    padding: 20px;
-    gap: 0.5rem;
-    font-size: 0.7rem;
-
-}
-.movie_row2::-webkit-scrollbar{
-    display: none;
-}
-
+  } */
+  
+  @media (max-width: 1200px) {
+    .contents h3 {
+      margin-left: 2rem;
+    }
+  
+    .movie_row,
+    .movie_row2 {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+    .movie_img {
+      width: 120px;
+    }
+  
+    .movie_img2 {
+      width: 75px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contents h3 {
+      margin-left: 1rem;
+    }
+  
+    .movie_row,
+    .movie_row2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+  
+    .movie_img {
+      width: 100px;
+    }
+  
+    .movie_img2 {
+      width: 60px;
+    }
+  
+    .movie_row2 {
+      font-size: 0.6rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contents h3 {
+      margin-left: 0.5rem;
+      font-size: 1rem;
+    }
+  
+    .movie_row,
+    .movie_row2 {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+      padding: 5px;
+    }
+  
+    .movie_img {
+      width: 80px;
+    }
+  
+    .movie_img2 {
+      width: 50px;
+    }
+  
+    .movie_row2 {
+      font-size: 0.5rem;
+    }
+  }
+  

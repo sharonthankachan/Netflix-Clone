@@ -1,45 +1,38 @@
-import React from 'react'
-import './Navbar.css'
-import logo from '../../assets/Netflix_Logo_RGB.png'
-import { FaBell, FaRegUserCircle, FaSearch } from "react-icons/fa";
-import { useState } from 'react';
+import React, { useState } from 'react';
+import './Navbar.css';
+import logo from '../../assets/Netflix_Logo_RGB.png';
 
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-function Navbar() {
-  const[search, setSearch]=useState(false)
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-  function handleSearch() {
-    setSearch(!search)
-    
-  }
-  let searchinitial=<a onClick={handleSearch}><FaSearch/></a>
-  let searchClicked=<><input type="search" className='searchbar' placeholder='Search  Movies, Series, etc.'/><a onClick={handleSearch}><FaSearch/></a></>
-                   
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
-    <div className='navbar col'>
-        <div className="left col">
-            <img src={logo} alt="Netflix Logo" className='logo'/>
-            <div className="left_nav_items">
-              <a href="" >Home</a>
-              <a href="">TV Shows</a>
-              <a href="">Movies</a>
-              <a href="">New & Popular</a>
-              <a href="">My List</a>
-            </div>
+    <nav className="navbar">
+      <div className="navbar-container">
+        <img src={logo} alt="Netflix Logo" className="navbar-logo" />
+        <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
+          <li className="navbar-close" onClick={closeMenu}>X</li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">TV Shows</a></li>
+          <li><a href="/">Movies</a></li>
+          <li><a href="/">New & Popular</a></li>
+          <li><a href="/">My List</a></li>
+        </ul>
+        <div className="navbar-toggle" onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
-        <div className="right col">
-            <div className="right_nav_items">
-            {search?searchClicked:searchinitial}
-              <a href="">KIDS</a>
-              <a href="">DVD</a>
-              <a href=""><FaBell/></a>
-              <a href=""><FaRegUserCircle className='nav_icon'/></a>
-              
-            </div>
-        </div>
-    </div>
-  )
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;
