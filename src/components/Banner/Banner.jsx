@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from "react";
 import "./Banner.css";
 import { FaPlay, FaPlus, FaSearch } from "react-icons/fa";
-import symbol from "../../assets/Netflix_Symbol_CMYK.png";
+import symbol from "../../assets/F_Logo.png";
 import topten from "../../assets/TopTen.png";
 import axios from '../API/Axios'
 import { imgUrl } from "../API/URL";

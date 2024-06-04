@@ -27,7 +27,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 Sharon's Netflix Clone. All rights reserved.</p>
+          <p>&copy; 2024 Sharon's Fakeflix. All rights reserved.</p>
         </div>
       </div>
     </footer>
